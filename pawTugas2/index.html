@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITERA - Institut Teknologi Sumatera</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222222;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #8a0000;
+            color: #ffffff;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            padding: 10px 6%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+        }
+
+        .logo a {
+            display: block;
+        }
+
+        .logo img {
+            width: 65px;
+            height: auto;
+            display: block;
+            margin-right: 12px;
+        }
+
+        .tekslogo h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 20px;
+            line-height: 1.1;
+            color: #ffffff;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            color: #000000;
+        }
+
+        main {
+            width: 80%;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        .konten {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .isi {
+            flex: 1;
+            min-width: 0;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        section > h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 32px;
+            color: #8a0000;
+            margin-bottom: 25px;
+        }
+
+        article {
+            margin-bottom: 35px;
+        }
+
+        article h3 {
+            color: #8a0000;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        article p {
+            font-size: 16px;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        .tabel-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        caption {
+            text-align: left;
+            font-weight: bold;
+            color: #8a0000;
+            margin-bottom: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #cccccc;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #8a0000;
+            color: #ffffff;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        article ul {
+            margin-left: 25px;
+            line-height: 1.8;
+        }
+
+        article ul ul {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        aside {
+            width: 300px;
+            flex-shrink: 0;
+        }
+
+        .kotak-aside {
+            background-color: #f5f5f5;
+            border-top: 5px solid #8a0000;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .kotak-aside h2 {
+            color: #8a0000;
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
+
+        .kotak-aside h3 {
+            color: #8a0000;
+            font-size: 17px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+
+        .kotak-aside p {
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .kotak-aside ul {
+            padding-left: 20px;
+        }
+
+        .kotak-aside li {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .tombol-berita {
+            display: block;
+            background-color: #8a0000;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .tombol-berita:hover {
+            background-color: #660000;
+        }
+
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 30px 6%;
+            margin-top: 60px;
+        }
+
+        footer h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            line-height: 1.6;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .logo {
+                margin-right: 0;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .foto {
+                height: 250px;
+            }
+
+            main {
+                width: 90%;
+                margin: 35px auto;
+            }
+
+            .konten {
+                flex-direction: column;
+            }
+
+            .isi {
+                width: 100%;
+            }
+
+            aside {
+                width: 100%;
+            }
+
+            section > h2 {
+                font-size: 27px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            th,
+            td {
+                padding: 9px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <header>
+
+        <div class="logo">
+
+            <a href="index.html">
+                <img
+                    src="images/logoITERA.webp"
+                    alt="LogoITERA"
+                >
+            </a>
+
+            <div class="tekslogo">
+                <h1>
+                    INSTITUT TEKNOLOGI SUMATERA
+                </h1>
+            </div>
+
+        </div>
+
+
+        <nav aria-label="Navigasi utama">
+
+            <a href="#beranda">
+                Beranda
+            </a>
+
+            <a href="#sejarah">
+                Tentang ITERA
+            </a>
+
+            <a href="#fakultas">
+                Fakultas
+            </a>
+
+            <a href="berita.html">
+                Berita
+            </a>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="konten">
+
+            <div class="isi">
+
+                <section id="beranda">
+
+                    <h2>
+                        Selamat Datang di ITERA
+                    </h2>
+
+
+                    <article>
+
+                        <h3>
+                            Institut Teknologi Sumatera
+                        </h3>
+
+                        <p>
+                            Institut Teknologi Sumatera atau ITERA merupakan perguruan
+                            tinggi negeri yang berada di Provinsi Lampung. ITERA hadir
+                            sebagai salah satu perguruan tinggi teknologi di Indonesia
+                            yang memiliki fokus pada pengembangan ilmu pengetahuan dan
+                            teknologi.
+                        </p>
+
+                        <p>
+                            ITERA berkomitmen untuk menghasilkan sumber daya manusia
+                            yang unggul serta mampu memberikan kontribusi dalam
+                            perkembangan ilmu pengetahuan, teknologi, dan pembangunan
+                            Indonesia.
+                        </p>
+
+                    </article>
+
+                </section>
+
+                <section id="sejarah">
+
+                    <h2>
+                        Tentang ITERA
+                    </h2>
+
+
+                    <article>
+
+                        <h3>
+                            Sejarah ITERA
+                        </h3>
+
+                        <p>
+                            Institut Teknologi Sumatera, disingkat ITERA, adalah sebuah
+                            perguruan tinggi negeri yang terdapat di Provinsi Lampung
+                            di Pulau Sumatra. Lokasinya berada di antara wilayah Kabupaten
+                            Lampung Selatan dengan Kota Bandar Lampung. ITERA didirikan
+                            berdasarkan Peraturan Presiden Nomor 124 Tahun 2014 tentang
+                            Pendirian Institut Teknologi Sumatera (Lembaran Negara
+                            Republik Indonesia Tahun 2014 Nomor 253) yang ditetapkan
+                            Presiden Republik Indonesia Dr. H. Susilo Bambang Yudhoyono
+                            pada tanggal 6 Oktober 2014 dan diundangkan tanggal 9 Oktober 2014.
+                            Walaupun peresmiannya dilaksanakan pada tahun 2014, tetapi ITERA sudah
+                            memulai kegiatan akademik dengan menerima mahasiswa baru sejak tahun
+                            2012-2013. Selain ITB dan ITS, dengan dibukanya ITERA dan ITK,
+                            maka pemerintah Indonesia memiliki empat institut teknologi.
+                        </p>
+
+                        <p>
+                            ITERA berkomitmen untuk menghasilkan sumber daya manusia
+                            yang unggul serta mampu memberikan kontribusi dalam
+                            perkembangan ilmu pengetahuan, teknologi, dan pembangunan
+                            Indonesia.
+                        </p>
+
+                    </article>
+
+
+                    <article>
+
+                        <h3>
+                            Visi
+                        </h3>
+
+                        <p>
+                            Menjadi perguruan tinggi yang unggul, bermartabat, mandiri, dan diakui dunia, serta berkontribusi
+                            dalam perubahan yang mampu meningkatkan kesejahteraan bangsa Indonesia dan dunia dengan memberdayakan
+                            potensi yang ada di wilayah Sumatera dan sekitarnya.
+                        </p>
+
+                        <h3>
+                            Misi
+                        </h3>
+
+                        <p>
+                            1. Menyelenggarakan tri dharma perguruan tinggi yang berkualitas untuk menghasilkan lulusan yang unggul dan berbudi pekerti luhur; <br>
+                            2. Menyelenggarakan pengelolaan perguruan tinggi yang berintegritas; <br>
+                            3. Menyelenggarakan pengelolaan sumber daya secara professional; dan <br>
+                            4. Memberikan kontribusi dalam bidang ilmu pengetahuan dan/atau teknologi yang berdaya guna.
+                        </p>
+
+                    </article>
+
+                </section>
+
+                <section id="fakultas">
+
+                    <h2>
+                        Fakultas
+                    </h2>
+
+                    <article>
+
+                        <h3>
+                            Fakultas Sains (FS)
+                        </h3>
+
+                        <p>
+                            Fakultas Sains merupakan salah satu fakultas yang berkedudukan
+                            di Institut Teknologi Sumatera (ITERA). Fakultas Sains ITERA
+                            memiliki 10 program studi yang berkaitan dengan kebutuhan
+                            sumber daya manusia (SDM) yang siap berkontribusi dalam perubahan.
+                            Juga dalam mengembangkan sains dan teknologi guna menggali potensi yang
+                            ada di Indonesia umumnya, dan Sumatera khususnya.
+                        </p>
+
+
+                        <div class="tabel-container">
+
+                            <table>
+
+                                <caption>
+                                    Program Studi Fakultas Sains
+                                </caption>
+
+                                <thead>
+
+                                    <tr>
+                                        <th scope="col">No.</th>
+                                        <th scope="col">
+                                            Program Studi
+                                        </th>
+                                        <th scope="col">
+                                            Jenjang
+                                        </th>
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Fisika</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Kimia</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Biologi</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Matematika</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Farmasi</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Sains Lingkungan Kelautan (SLL)</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Sains Atmosfer dan Keplanetan</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Sains Aktuaria</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Sains Data</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Magister Fisika</td>
+                                        <td>S2</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </article>
+
+                    <article>
+
+                        <h3>
+                            Fakultas Teknologi Industri (FTI)
+                        </h3>
+
+                        <p>
+                            Fakultas Teknologi Industri (FTI) ITERA berasal dari Jurusan Teknologi Produksi dan Industri (JTPI)
+                            ITERA yang terbentuk pada tahun 2018 sesuai SK rektor Nomor 870/IT9.A/SK/OT/2018. FTI ITERA terbentuk
+                            berdasarkan Peraturan Menteri Pendidikan, Kebudayaan, Riset dan Teknologi Republik Indonesia Nomor
+                            56 Tahun 2023 tanggal 20 September 2023 telah membuka beberapa program studi.
+                        </p>
+
+
+                        <div class="tabel-container">
+
+                            <table>
+
+                                <caption>
+                                    Program Studi Fakultas Teknologi
+                                    Industri
+                                </caption>
+
+                                <thead>
+
+                                    <tr>
+                                        <th scope="col">No.</th>
+                                        <th scope="col">
+                                            Program Studi
+                                        </th>
+                                        <th scope="col">
+                                            Jenjang
+                                        </th>
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Rekayasa Instrumentasi dan Automasi</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Rekayasa Kehutanan</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Rekayasa Kosmetik</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Rekayasa Minyak dan Gas</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Rekayasa Keolahragaan</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Teknik Biomedis</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Teknik Biosistem</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Teknik Elektro</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Teknik Fisika</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Teknik Geofisika</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>11</td>
+                                        <td>Teknik Geologi</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>12</td>
+                                        <td>Teknik Industri</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>13</td>
+                                        <td>Teknik Informatika</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>14</td>
+                                        <td>Teknik Kimia</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>15</td>
+                                        <td>Teknik Material</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>16</td>
+                                        <td>Teknik Mesin</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>17</td>
+                                        <td>Teknik Pertambangan</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>18</td>
+                                        <td>Teknik Sistem Energi</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>19</td>
+                                        <td>Teknik Telekomunikasi</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>20</td>
+                                        <td>Teknik Industri Pertanian</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>21</td>
+                                        <td>Teknik Pangan</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </article>
+
+                    <article>
+
+                        <h3>
+                            Fakultas Teknologi Infrastruktur dan Kewilayahan (FTIK)
+                        </h3>
+
+                        <p>
+                            Fakultas Teknologi Infrastruktur dan Kewilayahan berfokus pada mengembangkan riset,
+                            inovasi, teknologi infrastruktur, serta perencanaan wilayah berkelanjutan.
+                        </p>
+
+
+                        <div class="tabel-container">
+
+                            <table>
+
+                                <caption>
+                                    Program Studi Fakultas Teknologi
+                                    Infrastruktur dan Kewilayahan
+                                </caption>
+
+                                <thead>
+
+                                    <tr>
+                                        <th scope="col">No.</th>
+                                        <th scope="col">
+                                            Program Studi
+                                        </th>
+                                        <th scope="col">
+                                            Jenjang
+                                        </th>
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Arsitektur</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Arsitektur Lanskap</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Desain Komunikasi Visual (DKV)</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Pariwisata</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Perencanaan Wilayah dan Kota (PWK)</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Rekayasa Tata Kelola Air Terpadu</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Teknik Geomatika</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Teknik Kelautan</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Teknik Lingkungan</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Teknik Sipil</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>11</td>
+                                        <td>Teknik Perkeretaapian</td>
+                                        <td>S1</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+            </div>
+
+            <aside>
+
+                <div class="kotak-aside">
+
+                    <h2>
+                        Pengumuman
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            Pendaftaran mahasiswa baru ITERA
+                        </li>
+
+                        <li>
+                            Informasi kegiatan akademik
+                        </li>
+
+                        <li>
+                            Jadwal dan informasi perkuliahan
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="kotak-aside">
+
+                    <h2>
+                        Berita Terkini
+                    </h2>
+
+                    <p>
+                        Lihat informasi dan berita terbaru
+                        seputar Institut Teknologi Sumatera.
+                    </p>
+
+                    <a
+                        class="tombol-berita"
+                        href="berita.html"
+                    >
+                        Berita Terkini
+                    </a>
+
+                </div>
+
+                <div class="kotak-aside">
+
+                    <h2>
+                        Informasi Kontak
+                    </h2>
+
+                    <p>
+                        <strong>Alamat</strong><br>
+                        Jalan Terusan Ryacudu,
+                        Way Hui, Jati Agung,
+                        Lampung Selatan, Lampung.
+                    </p>
+
+                    <p>
+                        <strong>Email</strong><br>
+                        info@itera.ac.id
+                    </p>
+
+                    <p>
+                        <strong>Telepon</strong><br>
+                        (0721) 8030188
+                    </p>
+
+                </div>
+
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <h2>
+            Institut Teknologi Sumatera
+        </h2>
+
+        <p>
+            Jalan Terusan Ryacudu, Way Hui,
+            Kecamatan Jati Agung, Lampung Selatan,
+            Provinsi Lampung.
+        </p>
+
+        <p>
+            &copy; 2026 Institut Teknologi Sumatera
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

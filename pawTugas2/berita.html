@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITERA - Berita</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #000000;
+            background-color: #ffffff;
+        }
+
+        header {
+            background-color: #8a0000;
+            color: #ffffff;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            padding: 10px 6%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+        }
+
+        .logo a {
+            display: block;
+        }
+
+        .logo img {
+            width: 65px;
+            height: auto;
+            display: block;
+            margin-right: 12px;
+        }
+
+        .tekslogo h1 {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size: 20px;
+            line-height: 1.1;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            color: #000000;
+        }
+
+        main {
+            width: 80%;
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        section > h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 32px;
+            color: #8a0000;
+            margin-bottom: 25px;
+        }
+
+        article {
+            margin-bottom: 35px;
+        }
+
+        .berita {
+            border-bottom: 1px solid #cccccc;
+            padding: 25px 0;
+        }
+
+        .berita h3 {
+            font-size: 23px;
+            color: #8a0000;
+            margin-bottom: 10px;
+        }
+
+        .tanggal {
+            color: #777777;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .berita p {
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .berita a {
+            display: inline-block;
+            margin-top: 15px;
+            color: #8a0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 30px 6%;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .logo {
+                margin-right: 0;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .foto {
+                height: 250px;
+            }
+
+            main {
+                width: 90%;
+                margin: 35px auto;
+            }
+
+            .konten {
+                flex-direction: column;
+            }
+
+            .isi {
+                width: 100%;
+            }
+
+            aside {
+                width: 100%;
+            }
+
+            section > h2 {
+                font-size: 27px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            th,
+            td {
+                padding: 9px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+
+            <a href="index.html">
+                <img src="images/logoITERA.webp" alt="LogoITERA">
+            </a>
+
+            <div class="tekslogo">
+                <h1>
+                    INSTITUT TEKNOLOGI SUMATERA
+                </h1>
+            </div>
+
+        </div>
+
+        <nav aria-label="Navigasi utama">
+            <a href="index.html">Beranda</a>
+            <a href="index.html#sejarah">Tentang ITERA</a>
+            <a href="index.html#fakultas">Fakultas</a>
+            <a href="berita.html">Berita</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section id="halaman">
+
+            <h2>
+                Berita Terbaru
+            </h2>
+
+            <article id="berita">
+
+                <div class="berita">
+
+                    <h3>
+                        OAIL Bersama Jejaring Astronomi Nasional Berhasil Amati Okultasi Venus oleh Bulan
+                    </h3>
+
+                    <p class="tanggal">
+                        15 September 2026
+                    </p>
+
+                    <p>
+                        Observatorium Astronomi ITERA Lampung (OAIL) berkolaborasi dengan jejaring observatorium
+                        di seluruh Indonesia, termasuk Observatorium Bosscha, Bandung, melakukan pengamatan fenomena
+                        astronomi okultasi Venus oleh Bulan pada malam ini, Senin, 14 September 2026. Di Lampung,
+                        kegiatan pengamatan dilaksanakan di rooftop Gedung Kuliah Umum 2 Kampus ITERA.
+                    </p>
+
+                    <a href="berita.html">
+                        Baca Selengkapnya
+                    </a>
+
+                </div>
+
+
+                <div class="berita">
+
+                    <h3>
+                        Mahasiswa ITERA Virgoes Yehezkiel Sibarani Raih Juara Nasional Solo Pop Putra di Peksiminas
+                    </h3>
+
+                    <p class="tanggal">
+                        14 September 2026
+                    </p>
+
+                    <p>
+                        Mahasiswa Program Studi Teknik Pertambangan Institut Teknologi Sumatera (ITERA)
+                        Virgoes Yehezkiel Sibarani meraih Juara 3 Nasional cabang Solo Pop Putra pada
+                        Pekan Seni Mahasiswa Nasional (Peksiminas) XVIII 2026. Virgoes mengibarkan bendera
+                        ITERA di panggung kompetisi yang berlangsung di Universitas Jember, Jawa Timur,
+                        8–10 September 2026, dan diikuti perwakilan mahasiswa dari 31 provinsi di Indonesia.
+                    </p>
+
+                    <a href="berita.html">
+                        Baca Selengkapnya
+                    </a>
+
+                </div>
+
+
+                <div class="berita">
+
+                    <h3>
+                        Mahasiswa ITERA Raih Empat Medali Perak Kejurnas Kempo
+                    </h3>
+
+                    <p class="tanggal">
+                        11 September 2026
+                    </p>
+
+                    <p>
+                        Empat mahasiswa Institut Teknologi Sumatera (ITERA) meraih empat medali perak dalam
+                        Kejuaraan Nasional Kempo pada rangkaian Invitasi Cabang Olahraga Beladiri dan
+                        Terukur Mahasiswa Provinsi DKI Jakarta Tahun 2026. Kejuaraan yang diselenggarakan
+                        Dinas Pemuda dan Olahraga Provinsi DKI Jakarta itu berlangsung pada 8–10 September 2026 di
+                        GOR Matraman, Gelanggang Jakarta Pusat.
+                    </p>
+
+                    <a href="berita.html">
+                        Baca Selengkapnya
+                    </a>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <h3>INSTITUT TEKNOLOGI SUMATERA</h3>
+
+        <p>
+            Jalan Terusan Ryacudu, Way Hui, Kecamatan Jati Agung,
+            Lampung Selatan, Provinsi Lampung.
+        </p>
+
+        <p>
+            &copy; 2026 Institut Teknologi Sumatera
+        </p>
+
+    </footer>
+
+</body>
+</html>
